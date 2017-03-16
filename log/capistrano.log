@@ -1,0 +1,107 @@
+# Logfile created on 2017-03-16 13:19:29 +0000 by logger.rb/41954
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-16 13:19:29 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [6546a463] Running /usr/bin/env mkdir -p /tmp/ors_landing_page/ as wcmc@ort-production.linode.unep-wcmc.org
+ DEBUG [6546a463] Command: /usr/bin/env mkdir -p /tmp/ors_landing_page/
+  INFO [6546a463] Finished in 0.718 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/ors_landing_page/git-ssh.sh 0.0%
+  INFO Uploading /tmp/ors_landing_page/git-ssh.sh 100.0%
+  INFO [327e2290] Running /usr/bin/env chmod +rx /tmp/ors_landing_page/git-ssh.sh as wcmc@ort-production.linode.unep-wcmc.org
+ DEBUG [327e2290] Command: /usr/bin/env chmod +rx /tmp/ors_landing_page/git-ssh.sh
+  INFO [327e2290] Finished in 0.034 seconds with exit status 0 (successful).
+  INFO [3c4a4a44] Running /usr/bin/env git ls-remote --heads git@github.com:unepwcmc/ors_landing_page.git as wcmc@ort-production.linode.unep-wcmc.org
+ DEBUG [3c4a4a44] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/ors_landing_page/git-ssh.sh" ; /usr/bin/env git ls-remote --heads git@github.com:unepwcmc/ors_landing_page.git )
+ DEBUG [3c4a4a44] 	e70bcbad7838238ea9f7828d0fa74f4620091771	refs/heads/master
+  INFO [3c4a4a44] Finished in 1.095 seconds with exit status 0 (successful).
+  INFO [fcf3026a] Running /usr/bin/env mkdir -p /home/wcmc/ors_landing_page/shared /home/wcmc/ors_landing_page/releases as wcmc@ort-production.linode.unep-wcmc.org
+ DEBUG [fcf3026a] Command: /usr/bin/env mkdir -p /home/wcmc/ors_landing_page/shared /home/wcmc/ors_landing_page/releases
+  INFO [fcf3026a] Finished in 0.160 seconds with exit status 0 (successful).
+ DEBUG [f1271810] Running [ -f /home/wcmc/ors_landing_page/current/REVISION ] as wcmc@ort-production.linode.unep-wcmc.org
+ DEBUG [f1271810] Command: [ -f /home/wcmc/ors_landing_page/current/REVISION ]
+ DEBUG [f1271810] Finished in 0.039 seconds with exit status 1 (failed).
+ DEBUG [b573dd7c] Running [ -f /home/wcmc/ors_landing_page/repo/HEAD ] as wcmc@ort-production.linode.unep-wcmc.org
+ DEBUG [b573dd7c] Command: [ -f /home/wcmc/ors_landing_page/repo/HEAD ]
+ DEBUG [b573dd7c] Finished in 0.033 seconds with exit status 1 (failed).
+ DEBUG [7a4d68a8] Running if test ! -d /home/wcmc/ors_landing_page; then echo "Directory does not exist '/home/wcmc/ors_landing_page'" 1>&2; false; fi as wcmc@ort-production.linode.unep-wcmc.org
+ DEBUG [7a4d68a8] Command: if test ! -d /home/wcmc/ors_landing_page; then echo "Directory does not exist '/home/wcmc/ors_landing_page'" 1>&2; false; fi
+ DEBUG [7a4d68a8] Finished in 0.038 seconds with exit status 0 (successful).
+  INFO [c53baa90] Running /usr/bin/env git clone --mirror git@github.com:unepwcmc/ors_landing_page.git /home/wcmc/ors_landing_page/repo as wcmc@ort-production.linode.unep-wcmc.org
+ DEBUG [c53baa90] Command: cd /home/wcmc/ors_landing_page && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/ors_landing_page/git-ssh.sh" ; /usr/bin/env git clone --mirror git@github.com:unepwcmc/ors_landing_page.git /home/wcmc/ors_landing_page/repo )
+ DEBUG [c53baa90] 	Cloning into bare repository '/home/wcmc/ors_landing_page/repo'...
+ DEBUG [c53baa90] 	remote: Counting objects: 21, done.[K
+ DEBUG [c53baa90] 	remote: Compressing objects:   6% (1/16)   [Kremote: Compressing objects:  12% (2/16)   [Kremote: Compressing objects:  18% (3/16)   [Kremote: Compressing objects:  25% (4/16)   [Kremote: Compressing objects:  31% (5/16)   [Kremote: Compressing objects:  37% (6/16)   [K
+ DEBUG [c53baa90] 	remote: Compressing objects:  43% (7/16)   [Kremote: Compressing objects:  50% (8/16)   [K
+ DEBUG [c53baa90] 	remote: Compressing objects:  56% (9/16)   [K
+ DEBUG [c53baa90] 	remote: Compressing objects:  62% (10/16)   [Kremote: Compressing objects:  68% (11/16)   [Kremote: Compressing objects:  75% (12/16)   [Kremote: Compressing objects:  81% (13/16)   [Kremote: Compressing objects:  87% (14/16)   [K
+ DEBUG [c53baa90] 	remote: Compressing objects:  93% (15/16)   [Kremote: Compressing objects: 100% (16/16)   [K
+ DEBUG [c53baa90] 	remote: Compressing objects: 100% (16/16), done.[K
+ DEBUG [c53baa90] 	Receiving objects:   4% (1/21)   Receiving objects:   9% (2/21)   
+ DEBUG [c53baa90] 	Receiving objects:  14% (3/21)   
+ DEBUG [c53baa90] 	Receiving objects:  19% (4/21)   Receiving objects:  23% (5/21)   
+ DEBUG [c53baa90] 	Receiving objects:  28% (6/21)   
+ DEBUG [c53baa90] 	Receiving objects:  33% (7/21)   Receiving objects:  38% (8/21)   Receiving objects:  42% (9/21)   
+ DEBUG [c53baa90] 	Receiving objects:  47% (10/21)   
+ DEBUG [c53baa90] 	Receiving objects:  52% (11/21)   
+ DEBUG [c53baa90] 	Receiving objects:  57% (12/21)   
+ DEBUG [c53baa90] 	remote: Total 21 (delta 2), reused 18 (delta 2), pack-reused 0[K
+ DEBUG [c53baa90] 	Receiving objects:  61% (13/21)   
+ DEBUG [c53baa90] 	Receiving objects:  66% (14/21)   
+ DEBUG [c53baa90] 	Receiving objects:  71% (15/21)   
+ DEBUG [c53baa90] 	Receiving objects:  76% (16/21)   Receiving objects:  80% (17/21)   
+ DEBUG [c53baa90] 	Receiving objects:  85% (18/21)   Receiving objects:  90% (19/21)   
+ DEBUG [c53baa90] 	Receiving objects:  95% (20/21)   
+ DEBUG [c53baa90] 	Receiving objects: 100% (21/21)   
+ DEBUG [c53baa90] 	Receiving objects: 100% (21/21), 163.65 KiB | 0 bytes/s, done.
+ DEBUG [c53baa90] 	Resolving deltas:   0% (0/2)   
+ DEBUG [c53baa90] 	Resolving deltas:  50% (1/2)   
+ DEBUG [c53baa90] 	Resolving deltas: 100% (2/2)   
+ DEBUG [c53baa90] 	Resolving deltas: 100% (2/2), done.
+ DEBUG [c53baa90] 	Checking connectivity... 
+ DEBUG [c53baa90] 	done.
+  INFO [c53baa90] Finished in 1.391 seconds with exit status 0 (successful).
+ DEBUG [e6979a7d] Running if test ! -d /home/wcmc/ors_landing_page/repo; then echo "Directory does not exist '/home/wcmc/ors_landing_page/repo'" 1>&2; false; fi as wcmc@ort-production.linode.unep-wcmc.org
+ DEBUG [e6979a7d] Command: if test ! -d /home/wcmc/ors_landing_page/repo; then echo "Directory does not exist '/home/wcmc/ors_landing_page/repo'" 1>&2; false; fi
+ DEBUG [e6979a7d] Finished in 0.046 seconds with exit status 0 (successful).
+  INFO [eaa749db] Running /usr/bin/env git remote update --prune as wcmc@ort-production.linode.unep-wcmc.org
+ DEBUG [eaa749db] Command: cd /home/wcmc/ors_landing_page/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/ors_landing_page/git-ssh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [eaa749db] 	Fetching origin
+  INFO [eaa749db] Finished in 1.168 seconds with exit status 0 (successful).
+ DEBUG [3a965f6f] Running if test ! -d /home/wcmc/ors_landing_page/repo; then echo "Directory does not exist '/home/wcmc/ors_landing_page/repo'" 1>&2; false; fi as wcmc@ort-production.linode.unep-wcmc.org
+ DEBUG [3a965f6f] Command: if test ! -d /home/wcmc/ors_landing_page/repo; then echo "Directory does not exist '/home/wcmc/ors_landing_page/repo'" 1>&2; false; fi
+ DEBUG [3a965f6f] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [35a81665] Running /usr/bin/env mkdir -p /home/wcmc/ors_landing_page/releases/20170316131932 as wcmc@ort-production.linode.unep-wcmc.org
+ DEBUG [35a81665] Command: cd /home/wcmc/ors_landing_page/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/ors_landing_page/git-ssh.sh" ; /usr/bin/env mkdir -p /home/wcmc/ors_landing_page/releases/20170316131932 )
+  INFO [35a81665] Finished in 0.040 seconds with exit status 0 (successful).
+  INFO [27efd395] Running /usr/bin/env git archive master | tar -x -f - -C /home/wcmc/ors_landing_page/releases/20170316131932 as wcmc@ort-production.linode.unep-wcmc.org
+ DEBUG [27efd395] Command: cd /home/wcmc/ors_landing_page/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/ors_landing_page/git-ssh.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/wcmc/ors_landing_page/releases/20170316131932 )
+  INFO [27efd395] Finished in 0.067 seconds with exit status 0 (successful).
+ DEBUG [62763a39] Running if test ! -d /home/wcmc/ors_landing_page/repo; then echo "Directory does not exist '/home/wcmc/ors_landing_page/repo'" 1>&2; false; fi as wcmc@ort-production.linode.unep-wcmc.org
+ DEBUG [62763a39] Command: if test ! -d /home/wcmc/ors_landing_page/repo; then echo "Directory does not exist '/home/wcmc/ors_landing_page/repo'" 1>&2; false; fi
+ DEBUG [62763a39] Finished in 0.048 seconds with exit status 0 (successful).
+ DEBUG [615eea44] Running /usr/bin/env git rev-list --max-count=1 master as wcmc@ort-production.linode.unep-wcmc.org
+ DEBUG [615eea44] Command: cd /home/wcmc/ors_landing_page/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/ors_landing_page/git-ssh.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [615eea44] 	e70bcbad7838238ea9f7828d0fa74f4620091771
+ DEBUG [615eea44] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG [49329ebf] Running if test ! -d /home/wcmc/ors_landing_page/releases/20170316131932; then echo "Directory does not exist '/home/wcmc/ors_landing_page/releases/20170316131932'" 1>&2; false; fi as wcmc@ort-production.linode.unep-wcmc.org
+ DEBUG [49329ebf] Command: if test ! -d /home/wcmc/ors_landing_page/releases/20170316131932; then echo "Directory does not exist '/home/wcmc/ors_landing_page/releases/20170316131932'" 1>&2; false; fi
+ DEBUG [49329ebf] Finished in 0.036 seconds with exit status 0 (successful).
+  INFO [a87fc891] Running /usr/bin/env echo "e70bcbad7838238ea9f7828d0fa74f4620091771" >> REVISION as wcmc@ort-production.linode.unep-wcmc.org
+ DEBUG [a87fc891] Command: cd /home/wcmc/ors_landing_page/releases/20170316131932 && /usr/bin/env echo "e70bcbad7838238ea9f7828d0fa74f4620091771" >> REVISION
+  INFO [a87fc891] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO [79412a3a] Running /usr/bin/env ln -s /home/wcmc/ors_landing_page/releases/20170316131932 /home/wcmc/ors_landing_page/releases/current as wcmc@ort-production.linode.unep-wcmc.org
+ DEBUG [79412a3a] Command: /usr/bin/env ln -s /home/wcmc/ors_landing_page/releases/20170316131932 /home/wcmc/ors_landing_page/releases/current
+  INFO [79412a3a] Finished in 0.038 seconds with exit status 0 (successful).
+  INFO [02edf239] Running /usr/bin/env mv /home/wcmc/ors_landing_page/releases/current /home/wcmc/ors_landing_page as wcmc@ort-production.linode.unep-wcmc.org
+ DEBUG [02edf239] Command: /usr/bin/env mv /home/wcmc/ors_landing_page/releases/current /home/wcmc/ors_landing_page
+  INFO [02edf239] Finished in 0.034 seconds with exit status 0 (successful).
+ DEBUG [2376558c] Running /usr/bin/env ls -xtr /home/wcmc/ors_landing_page/releases as wcmc@ort-production.linode.unep-wcmc.org
+ DEBUG [2376558c] Command: /usr/bin/env ls -xtr /home/wcmc/ors_landing_page/releases
+ DEBUG [2376558c] 	20170316131932
+ DEBUG [2376558c] Finished in 0.048 seconds with exit status 0 (successful).
+ DEBUG [39a1cdc8] Running if test ! -d /home/wcmc/ors_landing_page/releases; then echo "Directory does not exist '/home/wcmc/ors_landing_page/releases'" 1>&2; false; fi as wcmc@ort-production.linode.unep-wcmc.org
+ DEBUG [39a1cdc8] Command: if test ! -d /home/wcmc/ors_landing_page/releases; then echo "Directory does not exist '/home/wcmc/ors_landing_page/releases'" 1>&2; false; fi
+ DEBUG [39a1cdc8] Finished in 0.033 seconds with exit status 0 (successful).
+  INFO [d638fe7c] Running /usr/bin/env echo "Branch master (at e70bcbad7838238ea9f7828d0fa74f4620091771) deployed as release 20170316131932 by stuart" >> /home/wcmc/ors_landing_page/revisions.log as wcmc@ort-production.linode.unep-wcmc.org
+ DEBUG [d638fe7c] Command: cd /home/wcmc/ors_landing_page/releases && /usr/bin/env echo "Branch master (at e70bcbad7838238ea9f7828d0fa74f4620091771) deployed as release 20170316131932 by stuart" >> /home/wcmc/ors_landing_page/revisions.log
+  INFO [d638fe7c] Finished in 0.046 seconds with exit status 0 (successful).
