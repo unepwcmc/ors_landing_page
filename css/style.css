@@ -1,0 +1,36 @@
+header { margin: 20px 0; }
+header div.title {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+div.line {
+  border-bottom: 1px solid lightgrey;
+}
+
+header img { width: 200px; }
+
+div.info {
+  text-align: center;
+  font-size: 18px;
+  margin: 0 auto;
+}
+
+div.instances {
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+ul { list-style: none; }
+ul li {
+  margin: 0 20px;
+  float: left;
+}
+ul li.cms { margin-right: 0px; }
+li.instance img { width: 180px; }
+li.instance img.ascobans { width: 140px; }
+li.instance img.eurobats { width: 155px; }
